@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherImage"
+        tools:ignore="VisualLintBounds" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_50t"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/weatherImage"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownId">
+
+        <TableRow
+            android:id="@+id/tablerow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_margin="10dp"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/latitude"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="252dp" />
+
+            <EditText
+                android:id="@+id/latitude"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="@string/latitude_string"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal|numberSigned"
+                android:textAlignment="center" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tablerow3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginEnd="10dp"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/sea_level_pressure"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/seaLevelPressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/sea_level_pressure_string"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tablerow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_margin="10dp"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/longitude"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/longitude"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@color/white"
+                android:ems="10"
+                android:hint="@string/longitude_string"
+                android:inputType="numberDecimal|numberSigned"
+                android:textAlignment="center"
+                tools:ignore="Autofill" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tablerow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginEnd="10dp"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/wind_direction"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/windDirection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/wind_direction_string"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tablerow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginEnd="10dp"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/wind_speed"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/windSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/wind_speed_string"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                tools:ignore="RtlHardcoded" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tablerow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginEnd="10dp"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/temperature"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/temperature_string"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tablerow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:layout_marginEnd="10dp"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/time"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center"
+                android:background="@color/text_blue"
+                android:padding="5sp"
+                android:text="@string/time_string"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/weatherImage"
+        android:layout_width="160dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/tableLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/clear_day" />
+
+</android.support.constraint.ConstraintLayout>
